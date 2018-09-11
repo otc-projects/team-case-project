@@ -116,6 +116,7 @@ nav a.active {
   background: var(--color-grey-light);
   color: var(--color-white);
   transition: all 0.1s;
+    cursor: pointer;
 }
 .container button:hover {
   background: var(--color-grey);
