@@ -20,10 +20,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link rel="stylesheet" href="css/globalStyles.css">
+    <link rel = "stylesheet" href = "css/adam.css">
 
     <title>Fennec Fox</title>
 
-    <!-- Blu.js is a JavaScript library I made a while back.
+    <!-- Blu.js is a JavaScript library I made a while back. 
+         I might want to use it later, so I'll just need to
+         upload it and uncomment the script tag below.
     <script src = "js/Blu.js"></script> -->
     <script src="js/adam.js"></script>
     <script src="js/modernizr.custom.05819.js"></script>
@@ -56,8 +59,16 @@
     <div class="container">
 
 
-        <img width="640" src="https://vignette.wikia.nocookie.net/animalplanetsthemostextreme/images/9/9c/Fennec_Fox.jpg/revision/latest?cb=20180620003719"
-            alt="Fennec Fox">
+        <div id = "imgContainer">
+            &nbsp;
+            <img width="640" src="img/Fennec_Fox.jpg" alt="fennec fox on rock">
+        </div>
+        
+        <div id = "thumbnailContainer">
+            <img width = "160" src = "img/Fennec_Fox_Small.jpg" alt = "fennec fox on rock">
+            <img width = "160" src = "img/fennec_running_sand_small.jpg" alt = "fennec fox running through sand">
+            <img width = "160" src = "img/four_fennec_small.jpg" alt = "four fennec foxes">
+        </div>
 
         <h2>Fennec Fox</h2>
 
@@ -94,6 +105,7 @@
         <label for="email">Sign up for news letters: </label>
         <input type="email" id="newsLttrField" name="email" placeholder="someone@example.com" required>
         <button id="newsLttrBttn">Sign Up</button>
+        <p style = "color: red;"></p>
     </div>
 </body>
 
