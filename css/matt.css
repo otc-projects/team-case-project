@@ -1,12 +1,28 @@
- /* 
+/* 
  Name: 	Matt Hays
  Class: 	FA18-CIS-131-W01-Web Site Development II
  Date:	 	09/09/18
  Project:	Team Case Project
  */
 
- #answer {
-  color: orangered;;
+#answer {
+  color: orangered;
   opacity: 0;
-  transition: opacity .5s;
- }
+  transition: opacity 0.5s;
+}
+
+#featured-image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
+#thumbnail-gallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+#thumbnail-gallery img {
+  margin: 0 20px 0 0;
+}

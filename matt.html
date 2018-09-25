@@ -14,9 +14,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 	<link rel="stylesheet" href="css/globalStyles.css">
 	<link rel="stylesheet" href="css/matt.css">
-	<title>Octopus</title>
 	<script src="js/modernizr.custom.05819.js"></script>
 	<script src="js/matt.js"></script>
+	<title>Octopus</title>
 </head>
 
 <body>
@@ -46,41 +46,75 @@
 	<div class="container">
 
 
-		<img src="img/octopus.jpg" alt="Octopus">
+		<img id="featured-image" src="img/octopus-1-large.jpg" alt="Large Gallery Image">
+
+		<div id="thumbnail-gallery">
+			<img src="img/octopus-1-small.jpg" alt="Small Thumbnail Image" onclick="SwapImage('octopus-0')">
+			<img src="img/octopus-2-small.jpg" alt="Small Thumbnail Image" onclick="SwapImage('octopus-1')">
+			<img src="img/octopus-3-small.jpg" alt="Small Thumbnail Image" onclick="SwapImage('octopus-2')">
+
+		</div>
 
 		<!-- <button>Button</button> -->
 
 		<h2>Octopus Facts</h2>
 
 
-		<p>Common octopuses will collect crustacean shells and other objects to construct fortresses, or “gardens,” around their lairs.
+		<p>Common octopuses will collect crustacean shells and other objects to construct fortresses, or “gardens,” around
+			their lairs.
 			Other octopuses carry shells for protection.</p>
-		<p>They have been found to play with a ‘toy’ and to have individual responses and individual temperaments, with some scientists
+		<p>They have been found to play with a ‘toy’ and to have individual responses and individual temperaments, with some
+			scientists
 			bepeving they have individual personapties.</p>
 		<p>They also have beak-pke jaws that can depver a nasty bite, and venomous sapva, used mainly for subduing prey.</p>
 		<p>They can solve problems, as when they remove a plug or unscrew a pd to get prey from a container.</p>
-		<p>Octopuses have three hearts. Two pump blood through each of the two gills, while the third pumps blood through the body.
+		<p>Octopuses have three hearts. Two pump blood through each of the two gills, while the third pumps blood through the
+			body.
 		</p>
-		<p>Fast swimmers, they can jet forward by expelling water through their mantles. And their soft bodies, with no internal or
+		<p>Fast swimmers, they can jet forward by expelling water through their mantles. And their soft bodies, with no
+			internal or
 			external skeleton, can squeeze into impossibly small cracks and crevices where predators can’t follow.</p>
 
 
 		<h2>Fun Fact Question</h2>
 		<P>What do octopus eat?</P>
-		<P id="answer">Octopuses are carnivores, which means they eat meat. Meals can include clams, shrimp, lobsters, fish, sharks and even birds.</P>
+		<P id="answer">Octopuses are carnivores, which means they eat meat. Meals can include clams, shrimp, lobsters, fish,
+			sharks and even birds.</P>
 
 		<button id="answerButton">Answer</button>
-
 	</div>
 
-	<script>
-		let answer = document.getElementById("answer");
 
+	<script>
+
+		//REVEALS THE ANSWER TO THE FUN FACT QUESTION 
+		//for the "fun facts question" this script reveals the answer when you click the answer button
+		let answer = document.getElementById("answer");
 		function showAnswer() {
 			answer.style.opacity = 1;
 		}
-
 		document.getElementById("answerButton").addEventListener("click", showAnswer, false);
+
+
+
+		// PICTURE GALLERY SCRIPT SWAPS IMAGES WHEN YOU CLICK THE THUMBNAILS
+		//creates an array of large images for the featured image
+		let largeImages = ["octopus-1-large.jpg", "octopus-2-large.jpg", "octopus-3-large.jpg"];
+
+		//assigns the image tag with #featured-image to a vairable
+		let featuredImage = document.querySelector("#featured-image");
+
+		function SwapImage(image) {
+			if (image === "octopus-0") {
+				featuredImage.src = "img/" + largeImages[0];
+			}
+			if (image === "octopus-1") {
+				featuredImage.src = "img/" + largeImages[1];
+			}
+			if (image === "octopus-2") {
+				featuredImage.src = "img/" + largeImages[2];
+			}
+		}
 	</script>
 
 </body>
